@@ -1,0 +1,500 @@
+/*============    ШРИФТЫ    ===========*/
+@font-face {
+  font-family: 'PFDinTextCompProBold';
+  src: url('fonts/PFDinTextCompProBold.eot');
+  src: url('fonts/PFDinTextCompProBold.eot') format('embedded-opentype'),
+  url('fonts/PFDinTextCompProBold.woff2') format('woff2'),
+  url('fonts/PFDinTextCompProBold.woff') format('woff'),
+  url('fonts/PFDinTextCompProBold.ttf') format('truetype'),
+  url('fonts/PFDinTextCompProBold.svg#PFDinTextCompProBold') format('svg');
+}
+@font-face {
+  font-family: 'PFDinTextCompProLight';
+  src: url('fonts/PFDinTextCompProLight.eot');
+  src: url('fonts/PFDinTextCompProLight.eot') format('embedded-opentype'),
+  url('fonts/PFDinTextCompProLight.woff2') format('woff2'),
+  url('fonts/PFDinTextCompProLight.woff') format('woff'),
+  url('fonts/PFDinTextCompProLight.ttf') format('truetype'),
+  url('fonts/PFDinTextCompProLight.svg#PFDinTextCompProLight') format('svg');
+}
+@font-face {
+  font-family: 'PFDinTextCompProMedium';
+  src: url('fonts/PFDinTextCompProMedium.eot');
+  src: url('fonts/PFDinTextCompProMedium.eot') format('embedded-opentype'),
+  url('fonts/PFDinTextCompProMedium.woff2') format('woff2'),
+  url('fonts/PFDinTextCompProMedium.woff') format('woff'),
+  url('fonts/PFDinTextCompProMedium.ttf') format('truetype'),
+  url('fonts/PFDinTextCompProMedium.svg#PFDinTextCompProMedium') format('svg');
+}
+
+.bold{
+  font-family: "PFDinTextCompProBold";
+}
+
+.med{
+  font-family: "PFDinTextCompProMedium";
+}
+
+.light{
+  font-family: "PFDinTextCompProLight";
+}
+
+/*============    БАЗОВЫЕ НАСТРОЙКИ    ===========*/
+//У ВСЕХ ССЫЛОК УБИРАЕМ НИЖНЕЕ ПОДЧЕРКИВАНИЕ
+a:hover, a:focus, a:visited, a:active{
+  text-decoration: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+//УБИРАЕМ ОБВОДКУ ПРИ ФОКУСЕ У КНОПОК
+button:focus{
+  outline: none;
+}
+
+.container{
+  width: 768px;
+}
+
+/*====================    ШАПКА    ================*/
+header{
+  color: #fff;
+  .bg_head{
+    background: url("../img/map_travel1.jpg") no-repeat center center;
+  }
+  .line1{
+    background: rgba(0, 0, 0, 0.7);
+    .logotype {
+      text-align: center;
+      h3 {
+        margin-top: 5px;
+        padding: 0;
+        color: #fff;
+        font-size: 30px;
+        text-transform: uppercase;
+        .bold;
+        span{
+          color: #ff0036;
+          font-size: 35px;
+        }
+      }
+    }
+    .navigation{
+      nav{
+        margin-top: 10px;
+        ul.list-inline {
+          text-align: right;
+          a{
+            .bold;
+            font-size: 25px;
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 0 15px;
+            color: #fff;
+            -o-transition: all 0.1s 0.02s ease;
+            -webkit-transition: all 0.1s 0.02s ease;
+            -moz-transition: all 0.1s 0.02s ease;
+            &:hover {
+              color: #ff0036;
+            }
+          }
+        }
+      }
+    }
+  }
+  .line2{
+    height: 360px;
+    background: rgba(0, 0, 0, 0.3);
+    h2{
+      color: #fff;
+      .bold;
+      font-size: 40px;
+      text-transform: uppercase;
+      margin: 120px 0 0 0;
+    }
+    h3{
+      color: #d5d5d5;
+      font-size: 25px;
+      .med;
+      margin: 5px 0 0 0;
+    }
+    img{
+      margin: 115px 0 0 0;
+    }
+  }
+}
+
+/*====================    ГЛАВНЫЙ ЭКРАН    ================*/
+section#main{
+  .main{
+    background: #d5d5d5;
+    padding-bottom: 30px;
+  }
+  .section_header{
+    .bold;
+    font-size: 30px;
+    color: #ff0036;
+    text-transform: uppercase;
+    margin: 25px 0 35px 0;
+  }
+  #table{
+    position: relative;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    margin: 0;
+    th{
+      background: #ff0036;
+      color: white;
+      text-shadow: 0 1px 1px #2D2020;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      font-size: 20px;
+      text-align: center;
+      .bold;
+    }
+    td {
+      padding: 10px 20px;
+      background: #383536;
+      color: #fff;
+      .med;
+      font-size: 16px;
+      text-align: center;
+    }
+    .th_num, .th_del{
+      width: 10px;
+    }
+    .th_address{
+      width: 397px;
+    }
+    th, td {
+      border-style: solid;
+      border-width: 0 1px 1px 0;
+    }
+    td a{
+      color: #ff0036;
+      font-size: 30px;
+      .bold;
+      transform: rotate(-45deg);
+      display: block;
+    }
+    th:first-child {
+      border-top-left-radius: 10px;
+    }
+    th:last-child {
+      border-top-right-radius: 10px;
+      border-right: none;
+    }
+    tr:last-child td:first-child {
+      border-radius: 0 0 0 10px;
+    }
+    tr:last-child td:last-child {
+      border-radius: 0 0 10px 0;
+    }
+    tr td:last-child {
+      border-right: none;
+    }
+  }
+  #map{
+    width: 100%;
+    height: 238px;
+    border-radius: 10px;
+    display: none;
+  }
+  .plus{
+    position: absolute;
+    top: 15px;
+    left: -20px;
+    a{
+      text-align: center;
+      font-size: 20px;
+      padding: 4px 6px;
+      color: #383536;
+      background: #fff;
+      border-radius: 50%;
+      .bold;
+    }
+    &:hover{
+      a{
+        color: #ff0036;
+        background: #383536;
+      }
+    }
+  }
+  .block_list{
+    //margin: 30px 0 0 0;
+    text-align: center;
+    cursor: pointer;
+    a{
+      .bold;
+      font-size: 30px;
+      color: #ff0036;
+      border-radius: 45%;
+      padding: 5px 30px;
+      background: #383536;
+    }
+  }
+  .block_map{
+    text-align: center;
+    cursor: pointer;
+    a{
+      .bold;
+      font-size: 30px;
+      color: #383536;
+      border-radius: 45%;
+      padding: 5px 30px;
+      background: #fff;
+    }
+  }
+  .arrow{
+    text-align: center;
+    cursor: pointer;
+    a {
+      color: #383536;
+      font-size: 35px;
+      .bold;
+    }
+  }
+  .block_btn{
+    display: flex;
+    div{
+      margin-left: 5px;
+    }
+  }
+}
+
+/*====================    ФУТЕР    ================*/
+footer {
+  .contact {
+    background: #bfbfbf;
+  }
+  .section_header {
+    .bold;
+    font-size: 30px;
+    color: #ff0036;
+    text-transform: uppercase;
+    margin: 25px 0 35px 0;
+  }
+  address {
+    p#address {
+      text-transform: uppercase;
+      .bold;
+      font-size: 25px;
+      margin-bottom: 0;
+      &:before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background: url("../img/map_marker.png") no-repeat center center;
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 3px;
+      }
+    }
+    span#zp {
+      font-size: 20px;
+      .med;
+      color: #383536;
+    }
+  }
+  p#phone_footer {
+    text-transform: uppercase;
+    .bold;
+    font-size: 25px;
+    margin-bottom: 0;
+    &:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: url("../img/phone_marker.png") no-repeat center center;
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 3px;
+    }
+  }
+  span#number {
+    font-size: 20px;
+    .med;
+    color: #383536;
+  }
+  button#get_answer {
+    text-transform: uppercase;
+    padding: 5px 30px;
+    color: #ff0036;
+    background: #383536;
+    .bold;
+    border: none;
+    margin: 40px 0 45px 0;
+    font-size: 18px;
+    &:hover {
+      background-color: #ff0036;
+      color: #383536;
+      -o-transition: all 0.1s 0.02s ease;
+      -webkit-transition: all 0.1s 0.02s ease;
+      -moz-transition: all 0.1s 0.02s ease;
+    }
+  }
+  .footer_down {
+    background: #383536;
+    .icons{
+      margin-top: 15px;
+      margin-bottom: 10px;
+      a{
+        display: inline-block;
+        text-align: center;
+        width: 45px;
+        padding: 10px 0;
+        background: #fff;
+        border-radius: 50%;
+        color: #383536;
+        .bold;
+        font-size: 15px;
+        &:hover{
+          color: #ff0036;
+          background: #fff;
+        }
+      }
+    }
+    .tyutyunnik{
+      text-align: right;
+      margin-top: 10px;
+      h4{
+        color: #fff;
+        .bold;
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+      a{
+        color: #fff;
+        .bold;
+        font-size: 20px;
+        &:hover{
+          color: #ff0036;
+        }
+      }
+    }
+  }
+}
+
+/*============    	ВСПЛЫВАЮЩИЕ ОКНА    ===========*/
+.modal-dialog{
+  margin-top: 10%;
+}
+.header_modal {
+  h4 {
+    text-transform: uppercase;
+    .bold;
+    color: #ff0036;
+  }
+}
+.modal-header{
+  border-bottom: none;
+  margin-top: -50px;
+  .close{
+    text-shadow: none;
+    color: #fff;
+    opacity: 0.9;
+    margin-right: -30px;
+  }
+}
+.modal-content{
+  input[name="name"]{
+    background: url("../img/map_marker.png") no-repeat center left 5px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    .med;
+    font-size: 16px;
+    opacity: 0.5;
+    &:hover, &:focus{
+      opacity: 1;
+    }
+  }
+  button[type="submit"]{
+    text-transform: uppercase;
+    padding: 5px 30px;
+    color: #ff0036;
+    background: #383536;
+    .bold;
+    border: none;
+    font-size: 18px;
+    &:hover {
+      background-color: #ff0036;
+      color: #383536;
+      -o-transition: all 0.1s 0.02s ease;
+      -webkit-transition: all 0.1s 0.02s ease;
+      -moz-transition: all 0.1s 0.02s ease;
+    }
+  }
+  input[name="user"]{
+    background: url("../img/user_marker.png") no-repeat center left 5px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    .med;
+    font-size: 16px;
+    opacity: 0.5;
+    &:hover, &:focus{
+      opacity: 1;
+    }
+  }
+  input[name="email"]{
+    background: url("../img/email_marker.png") no-repeat center left 5px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    .med;
+    font-size: 16px;
+    opacity: 0.5;
+    &:hover, &:focus{
+      opacity: 1;
+    }
+  }
+  textarea{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    padding: 25px;
+    padding-left: 30px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    .med;
+    opacity: 0.5;
+    width: 100%;
+    &:hover, &:focus{
+      opacity: 1;
+    }
+  }
+}
+
+/*============    	АДАПТИВ    ===========*/
+
+@media(min-width:0px) and (max-width:320px) {
+	
+}
+
+@media(min-width:321px) and (max-width:480px) {
+	
+}
+
+@media(min-width:481px) and (max-width:768px) {
+	
+}
+
+@media(min-width:769px) and (max-width:992px) {
+	
+}
+
+@media(min-width:993px) and (max-width:1200px) {
+	
+}
+
+
+
